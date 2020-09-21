@@ -1,0 +1,25 @@
+{% extends "todo_app/base.html" %}
+{% block content %}
+
+    <br>
+    <br>
+    <br>
+    <br>
+<div class="row justify-content-center mt-5">
+        <div class="col-md-7 text-center">
+
+                 <h1>Your Todos!</h1>
+               <p>Life is fun. At the same time, those who wish to be reliable executors
+                need quick and easy access to their short-term goals to keep themselves on
+                track and moving toward their ideal lives. Having todos can grant you <u>direction</u>
+                and <u>focus</u> in a world filled with distractions. The <strong><i>My Todo</i></strong>
+                app is the user-friendly assistant you need to keep yourself on track
+                and moving toward your goals.</p>
+
+        {% if user.is_authenticated == False %}
+        <a role="button" class="btn btn-primary btn-lg" href="{% url 'signupuser' %}">Start</a>
+        {% endif %}
+        </div>
+    </div>
+
+{% endblock %}
